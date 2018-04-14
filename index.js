@@ -8,14 +8,63 @@ const chat = require('./chat.json');
 const announce = require('./announce.json');
 const runes = require('./runes');
 const petskills = require('./petskills');
+const path = require('path');
+const fs = require('fs');
+const url = require('url');
+
 const devChannelName = process.env.NODE_ENV !== 'production' ? 'botty-test' : '';
 let devChannel;
 // Dummy http server to avoid toggling state on Heroku. Can be useful later
+const hostName = process.env.NODE_ENV !== 'production' ? 'http://localhost:1337' : 'http://botpgm.herokuapp.com';
 const port = process.env.PORT || 1337;
 const PET_LEVEL_PER_RANK = [40, 80, 100];
 
-const requestHandler = (request, response) => {
-  response.end('Hello Node.js Server!');
+const requestHandler = (req, res) => {
+  // parse URL
+  const parsedUrl = url.parse(req.url);
+  // extract URL path
+  let pathname = `.${parsedUrl.pathname}`;
+  // based on the URL path, extract the file extention. e.g. .js, .doc, ...
+  const { ext } = path.parse(pathname);
+  // maps file extention to MIME typere
+  const map = {
+    '.ico': 'image/x-icon',
+    '.html': 'text/html',
+    '.js': 'text/javascript',
+    '.json': 'application/json',
+    '.css': 'text/css',
+    '.png': 'image/png',
+    '.jpg': 'image/jpeg',
+    '.wav': 'audio/wav',
+    '.mp3': 'audio/mpeg',
+    '.svg': 'image/svg+xml',
+    '.pdf': 'application/pdf',
+    '.doc': 'application/msword',
+  };
+
+  fs.exists(pathname, (exist) => {
+    if (!exist) {
+      // if the file is not found, return 404
+      res.statusCode = 404;
+      res.end(`File ${pathname} not found!`);
+      return;
+    }
+
+    // if is a directory search for index file matching the extention
+    if (fs.statSync(pathname).isDirectory()) pathname += `/index${ext}`;
+
+    // read file from file system
+    fs.readFile(pathname, (err, data) => {
+      if (err) {
+        res.statusCode = 500;
+        res.end(`Error getting the file: ${err}.`);
+      } else {
+        // if the file is found, set Content-type and send data
+        res.setHeader('Content-type', map[ext] || 'text/plain');
+        res.end(data);
+      }
+    });
+  });
 };
 
 const server = http.createServer(requestHandler);
@@ -29,7 +78,7 @@ server.listen(port, (err) => {
 
 // Prevent DYNO from sleeping :)
 setInterval(() => {
-  http.get('http://botpgm.herokuapp.com');
+  http.get(hostName);
 }, 300000);
 
 // Demarrage
@@ -203,46 +252,49 @@ bot.on('message', async (message) => {
 
 ${runeData.descFr}`,
         fields,
+        thumbnail: {
+          url: `${hostName}/static/images/Runes/${runeData.title}.png`,
+        },
       };
-
       message.channel.send({ embed });
       return;
     }
 
 
     // Commande Petskills (ajouter !petskill / !PS / !Pskill / !pskill)
-  if(['petskill', 'ps', 'pskill'].indexOf(command) !== -1){
+    if (['petskill', 'ps', 'pskill'].indexOf(command) !== -1) {
       const petskillName = `${args[0].toLowerCase().trim()} ${args[1].toLowerCase().trim()}`.trim();
       let petskillData;
-      if(petskills[petskillName]){
+      if (petskills[petskillName]) {
         petskillData = petskills[args[0]];
       } else {
-        petskillData = petskills[Object.keys(petskills).filter((petskill) => {
-          return petskills[petskill].aliases.indexOf(petskillName) !== -1 || petskills[petskill].titleFr.toLowerCase() === petskillName;
-        })[0]];
+        petskillData = petskills[Object.keys(petskills)
+          .filter(petskill => (petskills[petskill].aliases.indexOf(petskillName) !== -1 || petskills[petskill].titleFr.toLowerCase() === petskillName))[0]];
       }
-      if(!petskillData){
-        return message.channel.send('Mmmmmh, je ne connais pas et skill pet.');
+      if (!petskillData) {
+        message.channel.send('Mmmmmh, je ne connais pas et skill pet.');
+        return;
       }
       const fields = [];
 
       petskillData.levels.forEach((lvl, index) => {
-        fields.push({name : `Lv${index+1}`, value : lvl, inline:true})
+        fields.push({ name: `Lv${index + 1}`, value: lvl, inline: true });
       });
       petskillData.grades.forEach((grade, index) => {
-        fields.push({name: `Rang ${index+1}`, value : grade, inline:true})
-    });
+        fields.push({ name: `Rang ${index + 1}`, value: grade, inline: true });
+      });
 
       const embed = {
-        title : `${petskillData.title} / ${petskillData.titleFr}`,
-        color : 0xff88c7,
-        description : `${petskillData.desc}
+        title: `${petskillData.title} / ${petskillData.titleFr}`,
+        color: 0xff88c7,
+        description: `${petskillData.desc}
 
 ${petskillData.descFr}`,
-        fields
-        };
+        fields,
+      };
 
-      return message.channel.send({embed});
+      message.channel.send({ embed });
+      return;
     }
 
     // Commande help
