@@ -280,7 +280,7 @@ ${runeData.descFr}`,
         petskillData = petskills[args[0]];
       } else {
         petskillData = petskills[Object.keys(petskills)
-          .filter(petskill => (petskills[petskill].aliases.indexOf(petskillName) !== -1 || petskills[petskill].titleFr.toLowerCase() === petskillName))[0]];
+          .filter(petskill => (petskills[petskill].aliases.map((e)=>(e.toLowerCase())).indexOf(petskillName) !== -1 || petskills[petskill].titleFr.toLowerCase() === petskillName))[0]];
       }
       if (!petskillData) {
         message.channel.send('Mmmmmh, je ne connais pas et skill pet.');
