@@ -17,7 +17,7 @@ let devChannel;
 // Dummy http server to avoid toggling state on Heroku. Can be useful later
 const hostName = process.env.NODE_ENV !== 'production' ? 'http://localhost:1337' : 'http://botpgm.herokuapp.com';
 const port = process.env.PORT || 1337;
-const PET_LEVEL_PER_RANK = [40, 80, 100];
+const PET_LEVEL_PER_RANK = [40, 80, 100, 150];
 
 const requestHandler = (req, res) => {
   // parse URL
@@ -264,7 +264,7 @@ ${runeData.descFr}`,
 
     // Commande Petskills (ajouter !petskill / !PS / !Pskill / !pskill)
     if (['petskill', 'ps', 'pskill'].indexOf(command) !== -1) {
-      const petskillName = `${args[0].toLowerCase().trim()} ${args[1] ? args[1].toLowerCase().trim() : ''}`.trim();
+      const petskillName = args.map(arg => arg.trim().toLowerCase()).join(' ').trim();
       let petskillData;
       if (petskills[petskillName]) {
         petskillData = petskills[args[0]];
@@ -284,7 +284,7 @@ ${runeData.descFr}`,
       });
       petskillData.grades.forEach((grade, index) => {
         fieldsGrades.push({
-          name: `Rang ${index + 1} (Pet Lv${PET_LEVEL_PER_RANK[index]})`,
+          name: `Rang ${index + 1}`,
           value: grade,
           inline: !!petskillData.levels.length,
         });
