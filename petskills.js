@@ -22,10 +22,10 @@ module.exports = {
 'Deals DMG to weakest enemy',
     descFr: 'Inflige dégâts à l\'ennemi le plus faible',
     levels: ['-', 'DMG ↑ if low-HP enemy', 'DMG ↑ if low-HP enemy', 'May cause instant kill'],
-    grades: ['C35 Baphomet Jr / C60 High Orc',
-      'C100 Baphomet / C110 Jakk',
+    grades: ['C35 Baphomet Jr \nC60 High Orc',
+      'C100 Baphomet \nC110 Jakk',
       'C100 Any Blue pet',
-      'C150 Baphomet, Baphomet Jr / C150 Jakk, High Orc'],
+      'C150 Baphomet, Baphomet Jr \nC150 Jakk, High Orc'],
   },
   Awaken: {
     title: 'Awaken',
@@ -46,7 +46,7 @@ module.exports = {
     desc: 'Deal DMG to strongest enemy',
     descFr: 'Inflige des degats à l\'ennemi le plus fort',
     levels: ['-', 'Enemy tank HP↑ = DMG ↑', 'Enemy tank HP↑ = DMG ↑', '-'],
-    grades: ['C50 Golden Thief Bug / C80 Angeling', 'C80 Baphomet / C100 Jakk', 'PvP Master 25-50%'],
+    grades: ['C50 Golden Thief Bug \nC80 Angeling', 'C80 Baphomet \nC100 Jakk', 'PvP Master 25-50%'],
   },
   Concentration: {
     title: 'Concentration',
@@ -140,7 +140,7 @@ module.exports = {
     descFr: 'Protège un ami des effets spéciaux mais sera blessé par les CC',
     levels: [],
     grades: ['C30 Whisper, Orc Baby',
-      'C100 Golden Thief Bug / C110 Angeling',
+      'C100 Golden Thief Bug \nC110 Angeling',
       'C100 Ghostring, Deviling'],
   },
   'Follow-up': {
@@ -336,7 +336,7 @@ module.exports = {
     descFr: 'Réduit le temps de cast à tous les alliés',
     levels: ['1 skill', '1 skill', '2 skills'],
     grades: ['C30 Creamy, Bon Gun',
-      'C100 Drake / C110 Deviling',
+      'C100 Drake \nC110 Deviling',
       'C100 Hydra, Yoyo'],
   },
   'Raid Away': {
@@ -367,7 +367,7 @@ module.exports = {
     desc: "Receiving Physical DMG will lower the attacker's ASPD",
     descFr: 'Réduit l\'ASPD de l\'ennemi lorsque vous subissez des DGT physique',
     levels: ['-', 'Physical DMG taken ↓', 'Physical DMG taken ↓'],
-    grades: ['C30 Deviruchi, Deviling', 'C100 Maya / C110 Steam Gobelin', 'C120 Mistress / C130 Ghostring'],
+    grades: ['C30 Deviruchi, Deviling', 'C100 Maya \nC110 Steam Gobelin', 'C120 Mistress \nC130 Ghostring'],
   },
   Sleep: {
     title: 'Sleep',
@@ -417,7 +417,7 @@ module.exports = {
     desc: "Receiving Skill DMG will lower the attacker's Cast Speed",
     descFr: 'Réduit le cast speed de l\'ennemi quand vous subisez des dégâts de compétence',
     levels: ['-', 'Skill DMG taken ↓', 'Skill DMG taken ↓'],
-    grades: ['C30 Whisper, Ghostring', 'C100 Mistress / C110 Ghostring', 'C120 Maya / C130 Steam Gobelin'],
+    grades: ['C30 Whisper, Ghostring', 'C100 Mistress \n C110 Ghostring', 'C120 Maya \nC130 Steam Gobelin'],
   },
   'Stone Curse': {
     title: 'Stone Curse',
@@ -469,7 +469,7 @@ module.exports = {
     descFr: 'Libère l\'aventurier des CC',
     levels: ['Received DMG ↑', '-', '-', 'CC effects reflected'],
     grades: ['C30 Evil Skeleton, Archer Skeleton',
-      'C100 Osiris / C110 Isis',
+      'C100 Osiris \nC110 Isis',
       'C100 Goblin (Atk) O.O, Goblin (Crit) :D',
       'C150 Deniro, Jakk'],
   },
