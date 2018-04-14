@@ -96,7 +96,7 @@ bot.on('ready', () => {
       if (devChannel) {
         //  devChannel.send(`I'm back bitches!`);
       } else {
-        guild.channels.find('name', 'idle-ro_discussion').send('I\'m back bitches!');
+        // guild.channels.find('name', 'idle-ro_discussion').send('I\'m back bitches!');
       }
     }
   });
@@ -225,33 +225,34 @@ bot.on('message', async (message) => {
         message.channel.send('Mmmmmh, je ne connais pas cette rune.');
         return;
       }
+      const fieldsLv = [];
+      const fieldsGrades = [];
       const fields = [];
-
       runeData.levels.forEach((lvl, index) => {
-        fields.push({ name: `Lv${index + 1}`, value: lvl, inline: true });
+        fieldsLv.push({ name: `Lv${index + 1}`, value: lvl, inline: !!runeData.grades.length });
       });
       runeData.grades.forEach((grade, index) => {
-        fields.push({
+        fieldsGrades.push({
           name: `Rang ${index + 1} (Pet Lv${PET_LEVEL_PER_RANK[index]})`,
           value: grade,
-          inline: true,
+          inline: !!runeData.levels.length,
         });
       });
-
-      // Coô-Ky tente la mise en mage des data, mais manque un runeData.grades quelque part
-      /*
-     runeData.levels.forEach((lvl, index) => {
-      fields.push({name : `Lv${index+1}`, value : lvl, inline:true}) && `&#09;` &&
-      fields.push({name: `Pet E${PET_LEVEL_PER_RANK[index]}`, value : grade, inline:true})
-      });
-     */
+      while (fieldsLv.length || fieldsGrades.length) {
+        if (fieldsLv.length) {
+          fields.push(fieldsLv.shift());
+        }
+        if (fieldsGrades.length) {
+          fields.push(fieldsGrades.shift());
+        }
+      }
       const embed = {
         title: `${runeData.title} / ${runeData.titleFr}`,
         color: 0xff88c7,
         description: `${runeData.desc}
 
 ${runeData.descFr}`,
-        fields,
+        fields: fields.filter(element => !!element),
         thumbnail: {
           url: `${hostName}/static/images/Runes/${runeData.title}.png`,
         },
