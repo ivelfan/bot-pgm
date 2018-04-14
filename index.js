@@ -7,7 +7,7 @@ const config = require('./config.json');
 const chat = require('./chat.json');
 const announce = require('./announce.json');
 const runes = require('./runes');
-// const petskills = require('./petskills');
+const petskills = require('./petskills');
 const devChannelName = process.env.NODE_ENV !== 'production' ? 'botty-test' : '';
 let devChannel;
 // Dummy http server to avoid toggling state on Heroku. Can be useful later
@@ -211,8 +211,8 @@ ${runeData.descFr}`,
 
 
     // Commande Petskills (ajouter !petskill / !PS / !Pskill / !pskill)
-    /*  if(command === "petskill"){
-      const petskillName = args[0].toLowerCase().trim();
+  if(['petskill', 'ps', 'pskill'].indexOf(command) !== -1){
+      const petskillName = `${args[0].toLowerCase().trim()} ${args[1].toLowerCase().trim()}`.trim();
       let petskillData;
       if(petskills[petskillName]){
         petskillData = petskills[args[0]];
@@ -222,7 +222,7 @@ ${runeData.descFr}`,
         })[0]];
       }
       if(!petskillData){
-        return message.channel.send('Mmmmmh, je ne connais pas cet pet skill.');
+        return message.channel.send('Mmmmmh, je ne connais pas et skill pet.');
       }
       const fields = [];
 
@@ -245,7 +245,6 @@ ${petskillData.descFr}`,
       return message.channel.send({embed});
     }
 
-*/
     // Commande help
     if (command === 'announce') {
       if (member.roles.find('name', 'Modo') || member.roles.find('name', 'Botty_devs')) {
@@ -264,9 +263,9 @@ ${petskillData.descFr}`,
               } else { target = false; }
               // Message
               if (target) {
-                member.send(`${target} : ${broadcast.msg}`);
+                channel.send(`${target} : ${broadcast.msg}`);
               } else {
-                member.send(broadcast.msg);
+                channel.send(broadcast.msg);
               }
               isSent = true;
             }
