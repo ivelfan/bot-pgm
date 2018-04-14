@@ -48,6 +48,14 @@
 			"msg":			"⚔ WoE - Placement dans les équipes (suivez les directives) ⚔"
 		},
 		{
+			"name":			"build-woe",
+			"channel":		"woe-pgm",
+			"role":			"Please Gank Me",
+			"user":			false,
+			"times":		[{ "days": [6], "hours": [10], "mins": [0] }],
+			"msg":			"⚔ La WoE se rapproche! ⚔\n**Verifiez vos skill-sets et pet-skills __PvP__ !!!**\n*(Dans Ville → Guilde → Battle Prep → Details des équipes)*\nLa team __Défense__ est pleine ?"
+		},
+    {
 			"name":			"start-woe",
 			"channel":		"woe-pgm",
 			"role":			"Please Gank Me",
