@@ -222,7 +222,7 @@ bot.on('message', async (message) => {
       message.reply(m);
     }
     // Commande rune
-    if (command === 'rune') {
+    if (['rune','runes'].indexOf(command) !== -1) {
       const runeName = args[0].toLowerCase().trim();
       let runeData;
       if (runes[runeName]) {
@@ -283,7 +283,7 @@ ${runeData.descFr}`,
           .filter(petskill => (petskills[petskill].aliases.map((e)=>(e.toLowerCase())).indexOf(petskillName) !== -1 || petskills[petskill].titleFr.toLowerCase() === petskillName))[0]];
       }
       if (!petskillData) {
-        message.channel.send('Mmmmmh, je ne connais pas et skill pet.');
+        message.channel.send('Mmmmmh, je ne connais pas ce skill pet.');
         return;
       }
       const fieldsLv = [];
