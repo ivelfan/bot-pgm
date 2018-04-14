@@ -264,7 +264,7 @@ ${runeData.descFr}`,
 
     // Commande Petskills (ajouter !petskill / !PS / !Pskill / !pskill)
     if (['petskill', 'ps', 'pskill'].indexOf(command) !== -1) {
-      const petskillName = `${args[0].toLowerCase().trim()} ${args[1].toLowerCase().trim()}`.trim();
+      const petskillName = `${args[0].toLowerCase().trim()} ${args[1] ? args[1].toLowerCase().trim() : ''}`.trim();
       let petskillData;
       if (petskills[petskillName]) {
         petskillData = petskills[args[0]];
@@ -276,22 +276,37 @@ ${runeData.descFr}`,
         message.channel.send('Mmmmmh, je ne connais pas et skill pet.');
         return;
       }
+      const fieldsLv = [];
+      const fieldsGrades = [];
       const fields = [];
-
       petskillData.levels.forEach((lvl, index) => {
-        fields.push({ name: `Lv${index + 1}`, value: lvl, inline: true });
+        fieldsLv.push({ name: `Lv${index + 1}`, value: lvl, inline: !!petskillData.grades.length });
       });
       petskillData.grades.forEach((grade, index) => {
-        fields.push({ name: `Rang ${index + 1}`, value: grade, inline: true });
+        fieldsGrades.push({
+          name: `Rang ${index + 1} (Pet Lv${PET_LEVEL_PER_RANK[index]})`,
+          value: grade,
+          inline: !!petskillData.levels.length,
+        });
       });
-
+      while (fieldsLv.length || fieldsGrades.length) {
+        if (fieldsLv.length) {
+          fields.push(fieldsLv.shift());
+        }
+        if (fieldsGrades.length) {
+          fields.push(fieldsGrades.shift());
+        }
+      }
       const embed = {
         title: `${petskillData.title} / ${petskillData.titleFr}`,
         color: 0xff88c7,
         description: `${petskillData.desc}
 
 ${petskillData.descFr}`,
-        fields,
+        fields: fields.filter(e => (!!e)),
+        thumbnail: {
+          url: `${hostName}/static/images/PetSkills/${petskillData.thumbnail}`,
+        },
       };
 
       message.channel.send({ embed });

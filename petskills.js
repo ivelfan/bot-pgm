@@ -2,6 +2,7 @@ module.exports = {
   'Attack Strengthen': {
     title: 'Attack Strengthen',
     titleFr: 'Renforcer Attaque',
+    thumbnail: 'Attack_Strengthen.png',
     aliases: ['attack strenghten', 'renforcer attaque', 'atack strenghten', 'renforce attaque',
       'Atack strengten', 'attaque renforcer', 'attack strengthen', 'attaque renforcé',
       'atack strengthen', 'attack strength', 'strenghten attack', 'strengthen attack', 'AS'],
@@ -14,6 +15,7 @@ module.exports = {
   'Attack Terminator': {
     title: 'Attack Terminator',
     titleFr: 'Attaque Terminator',
+    thumbnail: 'Attack_Terminator.png',
     aliases: ['attack terminator', 'attaque terminator', 'attak terminator', 'attaque termi',
       'attack termi', 'atack terminator', 'AT'],
     desc:
@@ -28,6 +30,7 @@ module.exports = {
   Awaken: {
     title: 'Awaken',
     titleFr: 'Eveiller',
+    thumbnail: 'Awaken.png',
     aliases: ['awaken', 'eveiller', 'groupe SP', 'awake', 'eveille', 'group sp', 'éveiller', 'sp groupe',
       'éveille', 'sp group', 'éveil', 'eveil'],
     desc: 'Restores SP to all allies',
@@ -38,6 +41,7 @@ module.exports = {
   Bloodshot: {
     title: 'Bloodshot',
     titleFr: 'Sanguin / Tueur de costauds',
+    thumbnail: 'Bloodshot.png',
     aliases: ['bloodshot', 'sanguin', 'blood shot', 'tueur de costaud', 'blodshot', 'tueur de costauds'],
     desc: 'Deal DMG to strongest enemy',
     descFr: 'Inflige des degats à l\'ennemi le plus fort',
@@ -47,6 +51,7 @@ module.exports = {
   Concentration: {
     title: 'Concentration',
     titleFr: 'Concentration',
+    thumbnail: 'Concentration.png',
     aliases: ['concentration'],
     desc: 'Restore SP to lowest SP ally',
     descFr: 'Restaure des SP à l\'allié le plus faible',
@@ -56,6 +61,7 @@ module.exports = {
   'Controlled Enhance': {
     title: 'Controlled Enhance',
     titleFr: 'Contrôle amélioré',
+    thumbnail: 'Controlled_Enhance.png',
     aliases: ['Controlled Enhance', 'contrôle amélioré', 'Control Enhance', 'controle amélioré',
       'Controled Enhance', 'controle amelioré', 'enhance control', 'controle ameliore',
       'contrôle améliore', 'contrôle amelioré', 'CE'],
@@ -67,6 +73,7 @@ module.exports = {
   'Counter Attack': {
     title: 'Counter Attack',
     titleFr: 'Contre-attaque',
+    thumbnail: 'Counter_Attack.png',
     aliases: ['counter attack', 'contre attaque', 'counter', 'counter atack', 'contre-attaque',
       'contre', 'counter attak', 'contreattaque', 'counter attaque', 'counterattack', 'CA'],
     desc: 'Reflects damage',
@@ -77,6 +84,7 @@ module.exports = {
   Cure: {
     title: 'Cure',
     titleFr: 'Soin',
+    thumbnail: 'Cure.png',
     aliases: ['cure', 'soin', 'heal'],
     desc: 'Heals weakest ally',
     descFr: 'Soigne l\'allié le plus faible',
@@ -86,6 +94,7 @@ module.exports = {
   'DMG Share': {
     title: 'DMG Share',
     titleFr: 'Partager Dégâts',
+    thumbnail: 'DMG_Share.png',
     aliases: ['dmg share', 'partager degats', 'partager degat', 'damage share', 'partager dégats',
       'partager dégat', 'share dmg', 'partager dégâts', 'partager dégât', 'share damage',
       'partager degâts', 'partager degât', 'dmgshare', 'degats partager', 'degats partagé',
@@ -101,6 +110,7 @@ module.exports = {
   'Element Delay': {
     title: 'Element Delay',
     titleFr: 'Ralentissement élémentaire',
+    thumbnail: 'Element_Delay.png',
     aliases: ['element delay', 'ralentissement elementaire', 'elemental delay', 'ralentissement élementaire',
       'élement delay', 'ralentissement élémentaire', 'ED'],
     desc: 'Increases cast time for all enemies',
@@ -111,6 +121,7 @@ module.exports = {
   Fanatic: {
     title: 'Fanatic',
     titleFr: 'Fanatique',
+    thumbnail: 'Fanatic.png',
     aliases: ['Fanatic', 'fanatique', 'crit', 'fnatic', 'fnatique', 'fantic', 'fantique'],
     desc: 'Boosts crit chance for all allies',
     descFr: 'Booste le taux de CRIT des alliés',
@@ -123,6 +134,7 @@ module.exports = {
   Firmness: {
     title: 'Firmness',
     titleFr: 'Fermeté',
+    thumbnail: 'Firmness.png',
     aliases: ['firmness', 'fermeté', 'firmeness', 'fermete'],
     desc: 'Become immune to special effects (still vulnerable to CC)',
     descFr: 'Protège un ami des effets spéciaux mais sera blessé par les CC',
@@ -134,6 +146,7 @@ module.exports = {
   'Follow-up': {
     title: 'Follow-up',
     titleFr: 'Suivi',
+    thumbnail: 'Follow-up.png',
     aliases: ['follow up', 'suivi', 'follow-up', 'suivie', 'followup', 'FU'],
     desc: 'Attacks 1 enemy three times',
     descFr: 'Attaque 1 ennemi 3 fois',
@@ -149,6 +162,7 @@ module.exports = {
   'Frost Diver': {
     title: 'Frost Diver',
     titleFr: 'Plongeur de givre',
+    thumbnail: 'Frost_Diver.png',
     aliases: ['frost driver', 'plongeur de givre', 'frost diver', 'givre', 'FD'],
     desc: 'DMG & Freezes (single target)',
     descFr: 'Inflige des dégâts à un ennemi et le gel',
@@ -158,6 +172,7 @@ module.exports = {
   'Group Assassination': {
     title: 'Group Assassination',
     titleFr: 'Assassinat groupé',
+    thumbnail: 'Group_Assassination.png',
     aliases: ['group assassination', 'assassination group', 'assassination groupe', 'group assasination',
       'assasination group', 'assasination groupe', 'groupe assassination', 'assassination group',
       'assassination groupe', 'groupe assasination', 'assasination group', 'assasination groupe',
@@ -170,6 +185,7 @@ module.exports = {
   'Group Awaken': {
     title: 'Group Awaken',
     titleFr: 'Eveiller groupe',
+    thumbnail: 'Group_Awaken.png',
     aliases: ['group awaken', 'groupe eveil', 'éveiller group', 'awaken group', 'groupe eveiller',
       'éveiller groupe', 'groupe awaken', 'eveiller group', 'éveille groupe', 'awaken group',
       'eveiller groupe', 'eveille groupe', 'group awake', 'gawake', 'gawaken'],
@@ -181,6 +197,7 @@ module.exports = {
   'Group Counter': {
     title: 'Group Counter',
     titleFr: 'Contre-attaque (groupe)',
+    thumbnail: 'Group_Counter_Attack.png',
     aliases: ['group counter', 'contre attaque groupe', 'groupe counter', 'contre-attaque groupe',
       'counter group', 'contre attaque group', 'counter groupe', 'contre-attaque group', 'GC'],
     desc: 'Everyone reflects damage',
@@ -191,6 +208,7 @@ module.exports = {
   'Group Freeze': {
     title: 'Group Freeze',
     titleFr: 'Geler groupe',
+    thumbnail: 'Group_Frozen.png',
     aliases: ['group freeze', 'geler groupe', 'freeze group', 'geler group', 'freeze groupe',
       'groupe geler', 'group frozen', 'groupe gel', 'CC geler', 'gel groupe', 'CCfreeze',
       'gel group', 'CC freeze', 'CC gel', 'Gfreeze', 'Ggeler', 'GF', 'Ggel', 'Ggel'],
@@ -202,6 +220,7 @@ module.exports = {
   'Group Restore': {
     title: 'Group Restore',
     titleFr: 'Restaurer groupe',
+    thumbnail: 'Group_Restore.png',
     aliases: ['group restore', 'restaurer groupe', 'groupe restore', 'restaurer group', 'restore group', 'restaure group', 'restore groupe', 'restaure groupe'],
     desc: 'Heals all allies over time',
     descFr: 'Restaure HP en continu à tous les alliés',
@@ -211,6 +230,7 @@ module.exports = {
   'Group Sleep': {
     title: 'Group Sleep',
     titleFr: 'Sommeil de groupe',
+    thumbnail: 'Group_Sleep.png',
     aliases: ['group sleep', 'sommeil de groupe', 'groupe sleep', 'sommeil groupe', 'CC sleep', 'sommeil de group', 'sleep CC', 'sommeil group'],
     desc: 'Sleeps all enemies',
     descFr: 'Endors tous les ennemis',
@@ -220,6 +240,7 @@ module.exports = {
   'Group Stone': {
     title: 'Group Stone',
     titleFr: 'Pierre de malédiction groupe',
+    thumbnail: 'Group_Stone_Curse.png',
     aliases: ['group stone', 'pierre de malediction de groupe', 'groupe stone', 'pierre de malediction groupe', 'CC stone', 'pierre de malediction de group', 'stone CC', 'pierre de malediction group', 'pierre de malédiction de groupe', 'pierre de malédiction groupe', 'pierre de malédiction de group', 'pierre de malédiction group'],
     desc: 'Petrifies all enemies',
     descFr: 'Pétrifie tous les ennemis',
@@ -229,6 +250,7 @@ module.exports = {
   'Group Strengthen': {
     title: 'Group Strengthen',
     titleFr: 'Renforcer groupe',
+    thumbnail: 'Group_Strengthen.png',
     aliases: ['group strengthen', 'renforcer groupe', 'groupe renforcer', 'group strenghten', 'renforce groupe', 'groupe renforce', 'group strengten', 'renforcé groupe', 'groupe renforcé', 'groupe strengthen', 'renforcer group', 'groupe strenghten', 'renforce group', 'groupe strengten', 'renforcé group', 'strengthen group', 'strengthen groupe', 'strenghten group', 'strenghten groupe', 'strengten group', 'strengten groupe'],
     desc: 'Increase DEF (all allies)',
     descFr: 'Augmente la DEF de tous les alliés',
@@ -238,6 +260,7 @@ module.exports = {
   'Group Stun': {
     title: 'Group Stun',
     titleFr: 'Etourdir groupe',
+    thumbnail: 'Group_Stun.png',
     aliases: ['group stun', 'étourdir groupe', 'groupe stun', 'etourdir groupe', 'CC stun', 'étourdir group', 'stun CC', 'etourdir group'],
     desc: 'Stuns all enemies',
     descFr: 'Etourdi tous les ennemis',
@@ -247,6 +270,7 @@ module.exports = {
   'Life Stealer': {
     title: 'Life Stealer',
     titleFr: 'Voleur de vie',
+    thumbnail: 'Life_Stealer.png',
     aliases: ['life stealer', 'vol de vie', 'life steal', 'voleur de vie'],
     desc: 'When attacking, will randomly restore HP to a friend',
     descFr: 'Lors des attaques, recuperation de HP d\'un allié aléatoire',
@@ -256,6 +280,7 @@ module.exports = {
   'Life Transfer': {
     title: 'Life Transfer',
     titleFr: 'Transfert de vie',
+    thumbnail: 'Life_Transfer.png',
     aliases: ['life transfer', 'transfert de vie', 'life transfert', 'transfert vie'],
     desc: 'Restore the max HP for the weakest friend with part of your HP',
     descFr: 'Restaure le max de HP pour l\'allié le plus faible avec une partie de vos HP',
@@ -265,6 +290,7 @@ module.exports = {
   'Magic Burn': {
     title: 'Magic Burn',
     titleFr: 'Brûlure magique',
+    thumbnail: 'Magic_Burn.png',
     aliases: ['magic burn', 'brulure magique', 'sp burn', 'brûlure magique'],
     desc: 'Makes the enemy burn huge amounts of SP',
     descFr: 'Inflige immédiatement une grande perte de SP à l\'ennemi',
@@ -274,6 +300,7 @@ module.exports = {
   Marker: {
     title: 'Marker',
     titleFr: 'Marqueur',
+    thumbnail: 'Marker.png',
     aliases: ['marker', 'marqueur'],
     desc: 'All allies attack the marked enemy',
     descFr: 'Tous les alliés attaquent l\'ennemi marqué',
@@ -283,6 +310,7 @@ module.exports = {
   'Multiple Attack': {
     title: 'Multiple Attack',
     titleFr: 'Attaque multiple / Double attaque / Enchainement',
+    thumbnail: 'Multiple_Attack.png',
     aliases: ['mulitple attack', 'double attaque', 'attack multiple', 'double attack', 'attaque multiple', 'enchainement', 'enchaînement'],
     desc: 'Hits 1 enemy multiple times',
     descFr: 'Inflige des dégâts à un ennemi',
@@ -292,6 +320,7 @@ module.exports = {
   Protection: {
     title: 'Protection',
     titleFr: 'Protection',
+    thumbnail: 'Protection.png',
     aliases: ['protection', 'protéction'],
     desc: 'Decrease weakest ally DMG taken',
     descFr: 'Réduit DGT normal et compétence à l\'allié le plus faible',
@@ -301,6 +330,7 @@ module.exports = {
   'Quick Spell': {
     title: 'Quick Spell',
     titleFr: 'Sort Rapide',
+    thumbnail: 'Quick_Spell.png',
     aliases: ['quick spell', 'sort rapide', 'quick cast', 'quickspell', 'cast rapide', 'quik spell', 'quick spel', 'quik spel', 'QS'],
     desc: 'Reduces cast time for all allies',
     descFr: 'Réduit le temps de cast à tous les alliés',
@@ -312,6 +342,7 @@ module.exports = {
   'Raid Away': {
     title: 'Raid Away',
     titleFr: 'Balayage',
+    thumbnail: 'Raid_Away.png',
     aliases: ['raid away', 'balayage', 'raid away', 'balayer', 'raid awy', 'RA'],
     desc: 'Hits all enemies and Stuns briefly',
     descFr: 'Engendre des dégâts à tous les ennemis, les étourdis pendant un court instant',
@@ -321,6 +352,7 @@ module.exports = {
   Restore: {
     title: 'Restore',
     titleFr: 'Restaurer',
+    thumbnail: 'Restore.png',
     aliases: ['restore', 'restorer', 'restaurer', 'restaure'],
     desc: 'Heals everyone',
     descFr: 'Restore les HP de tous les alliés',
@@ -330,6 +362,7 @@ module.exports = {
   'Shield of Tardy': {
     title: 'Shield of Tardy',
     titleFr: 'Bouclier de Tardy',
+    thumbnail: 'Shield_of_Tardy.png',
     aliases: ['shield of tardy', 'bouclier de tardy', 'shield tardy', 'tardy shield', 'Tardy', 'ST', 'SoT'],
     desc: "Receiving Physical DMG will lower the attacker's ASPD",
     descFr: 'Réduit l\'ASPD de l\'ennemi lorsque vous subissez des DGT physique',
@@ -339,6 +372,7 @@ module.exports = {
   Sleep: {
     title: 'Sleep',
     titleFr: 'Sommeil',
+    thumbnail: 'Sleep_Attack.png',
     aliases: ['sleep', 'someil', 'sommeil'],
     desc: 'DMG & Sleep (single target)',
     descFr: 'Inflige DGT et sommeil à un ennemi',
@@ -348,6 +382,7 @@ module.exports = {
   'Sleep Attack': {
     title: 'Sleep Attack',
     titleFr: 'Attaque sommeil',
+    thumbnail: 'Sleep.png',
     aliases: ['sleep attack', 'attaque sommeil', 'sleep attak', 'attaque someil', 'SA'],
     desc: 'Deals Dmg to all enemies and Cause Sleep',
     descFr: 'Inflige DGT et sommeil à tous les ennemis',
@@ -357,6 +392,7 @@ module.exports = {
   Sneer: {
     title: 'Sneer',
     titleFr: 'Dérision',
+    thumbnail: 'Sneer.png',
     aliases: ['sneer', 'derision', 'taunt', 'dérision', 'target'],
     desc: 'Draw all enemies to attack yourself',
     descFr: 'Incite tous les ennemis à vous attaquer',
@@ -366,6 +402,7 @@ module.exports = {
   'Soul Destroyer': {
     title: 'Soul Destroyer',
     titleFr: "Destructeur d'âme",
+    thumbnail: 'Soul_Destroyer.png',
     aliases: ['soul destroyer', "destructeur d'ame", "destructeur d'âme", 'SD'],
     desc: 'DMG & Stun (single target)',
     descFr: 'Inflige DGT et étourdi un ennemi',
@@ -375,6 +412,7 @@ module.exports = {
   'Spirit Counter': {
     title: 'Spirit Counter',
     titleFr: 'Contre-esprit',
+    thumbnail: 'Spirit_Counter.png',
     aliases: ['spirit counter', 'contre esprit', 'contre-esprit'],
     desc: "Receiving Skill DMG will lower the attacker's Cast Speed",
     descFr: 'Réduit le cast speed de l\'ennemi quand vous subisez des dégâts de compétence',
@@ -384,6 +422,7 @@ module.exports = {
   'Stone Curse': {
     title: 'Stone Curse',
     titleFr: 'Pierre de Malediction',
+    thumbnail: 'Stone_Curse.png',
     aliases: ['stone curse', 'pierre de malediction', 'pierre de malédiction', 'SC'],
     desc: 'DMG & Stone (single target)',
     descFr: 'Inflige DGT et pétrifie un ennemi',
@@ -393,6 +432,7 @@ module.exports = {
   Strengthen: {
     title: 'Strengthen',
     titleFr: 'Renforcer',
+    thumbnail: 'Strengthen.png',
     aliases: ['strengthen', 'renforcer', 'strenghten', 'renforce', 'strengten', 'renforcé'],
     desc: 'Increase DEF (skill user)',
     descFr: 'Augmente la DEF (du lanceur de sort)',
@@ -402,6 +442,7 @@ module.exports = {
   Swift: {
     title: 'Swift',
     titleFr: 'Rapidité',
+    thumbnail: 'Swift.png',
     aliases: ['swift', 'rapidité', 'rapidite', 'ASPD'],
     desc: 'ASPD ↑ for all allies',
     descFr: 'Augmente l\'ASPD de tous les alliés',
@@ -411,6 +452,7 @@ module.exports = {
   Thump: {
     title: 'Thump',
     titleFr: 'Grand Coup / Attaque Lourde',
+    thumbnail: 'Thump.png',
     aliases: ['thump', 'grand coup', 'attaque lourde'],
     desc:
 'Deals damage (single target)',
@@ -421,6 +463,7 @@ module.exports = {
   Unyield: {
     title: 'Unyield',
     titleFr: 'Inflexible',
+    thumbnail: 'Unyield.png',
     aliases: ['unyield', 'inflexible', 'unyeld', 'infléxible'],
     desc: 'Free the adventurer from CC',
     descFr: 'Libère l\'aventurier des CC',
@@ -433,6 +476,7 @@ module.exports = {
   'Weak Track': {
     title: 'Weak Track',
     titleFr: 'Faible piste',
+    thumbnail: 'Weak_Track.png',
     aliases: ['weak track', 'faible piste', 'weak trak', 'weak trac', 'WT'],
     desc: 'Curses the enemy, If certain amount of attacks = stun',
     descFr: 'Maudit l\'ennemi, s\'il subit un certain nombre d\'attaque dans le temps impart, il est étourdii',
