@@ -17,7 +17,7 @@ let devChannel;
 // Dummy http server to avoid toggling state on Heroku. Can be useful later
 const hostName = process.env.NODE_ENV !== 'production' ? 'http://localhost:1337' : 'http://botpgm.herokuapp.com';
 const port = process.env.PORT || 1337;
-const PET_LEVEL_PER_RANK = [40, 80, 100];
+const PET_LEVEL_PER_RANK = [40, 80, 100, 150];
 
 const requestHandler = (req, res) => {
   // parse URL
@@ -186,9 +186,19 @@ bot.on('message', async (message) => {
     const command = args.shift().toLowerCase();
     // Commande help
     if (command === 'help') {
-      m = 'Commandes utilisateurs : !ping !time';
+      m = `**Commandes utilisateurs** :
+**!ping** : Afficher la latence du serveur
+**!time** : Donne l'heure (au cas où vous n'auriez pas de montre...)
+**!rune** _rune_ : Affiche des informations sur la rune _rune_ (ex: !rune ahstayi)
+**!petskill** _petskill_ : Affiche des informations sur let skill pet _petskill_ (!petskill shield of tardy)
+**!ps** : Alias pour !petskill
+**!pskill** : Alias pour !petskill
+`;
       if (member.roles.find('name', 'Modo') || member.roles.find('name', 'Botty_devs')) {
-        m += '\nCommandes admin : !announce';
+        m += `
+**Commandes admin** :
+**!announce** : Affiche la liste des différentes annonces et dans quel channel elles se déclenchent
+`;
       }
       message.author.send(m);
     }
@@ -264,7 +274,7 @@ ${runeData.descFr}`,
 
     // Commande Petskills (ajouter !petskill / !PS / !Pskill / !pskill)
     if (['petskill', 'ps', 'pskill'].indexOf(command) !== -1) {
-      const petskillName = `${args[0].toLowerCase().trim()} ${args[1].toLowerCase().trim()}`.trim();
+      const petskillName = args.map(arg => arg.trim().toLowerCase()).join(' ').trim();
       let petskillData;
       if (petskills[petskillName]) {
         petskillData = petskills[args[0]];
@@ -276,22 +286,37 @@ ${runeData.descFr}`,
         message.channel.send('Mmmmmh, je ne connais pas et skill pet.');
         return;
       }
+      const fieldsLv = [];
+      const fieldsGrades = [];
       const fields = [];
-
       petskillData.levels.forEach((lvl, index) => {
-        fields.push({ name: `Lv${index + 1}`, value: lvl, inline: true });
+        fieldsLv.push({ name: `Lv${index + 1}`, value: lvl, inline: !!petskillData.grades.length });
       });
       petskillData.grades.forEach((grade, index) => {
-        fields.push({ name: `Rang ${index + 1}`, value: grade, inline: true });
+        fieldsGrades.push({
+          name: `Rang ${index + 1}`,
+          value: grade,
+          inline: !!petskillData.levels.length,
+        });
       });
-
+      while (fieldsLv.length || fieldsGrades.length) {
+        if (fieldsLv.length) {
+          fields.push(fieldsLv.shift());
+        }
+        if (fieldsGrades.length) {
+          fields.push(fieldsGrades.shift());
+        }
+      }
       const embed = {
         title: `${petskillData.title} / ${petskillData.titleFr}`,
         color: 0xff88c7,
         description: `${petskillData.desc}
 
 ${petskillData.descFr}`,
-        fields,
+        fields: fields.filter(e => (!!e)),
+        thumbnail: {
+          url: `${hostName}/static/images/PetSkills/${petskillData.thumbnail}`,
+        },
       };
 
       message.channel.send({ embed });
