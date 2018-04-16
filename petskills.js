@@ -19,7 +19,7 @@ module.exports = {
     aliases: ['attack terminator', 'attaque terminator', 'attak terminator', 'attaque termi',
       'attack termi', 'atack terminator', 'AT'],
     desc:
-'Deals DMG to weakest enemy',
+            'Deals DMG to weakest enemy',
     descFr: 'Inflige dégâts à l\'ennemi le plus faible',
     levels: ['-', 'DMG ↑ if low-HP enemy', 'DMG ↑ if low-HP enemy', 'May cause instant kill'],
     grades: ['C35 Baphomet Jr \nC60 High Orc',
@@ -45,7 +45,7 @@ module.exports = {
     aliases: ['bloodshot', 'sanguin', 'blood shot', 'tueur de costaud', 'blodshot', 'tueur de costauds'],
     desc: 'Deal DMG to strongest enemy',
     descFr: 'Inflige des degats à l\'ennemi le plus fort',
-    levels: ['-', 'Enemy tank HP↑ = DMG ↑', 'Enemy tank HP↑ = DMG ↑', '-'],
+    levels: ['-', 'Enemy tank HP↑ = DMG ↑', 'Enemy tank HP↑ = DMG ↑'],
     grades: ['C50 Golden Thief Bug \nC80 Angeling', 'C80 Baphomet \nC100 Jakk', 'PvP Master 25-50%'],
   },
   Concentration: {
