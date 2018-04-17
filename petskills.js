@@ -396,7 +396,7 @@ module.exports = {
   'Sleep Attack': {
     title: 'Sleep Attack',
     titleFr: 'Attaque sommeil',
-    thumbnail: 'Sleep.png',
+    thumbnail: 'Sleep_Attack.png',
     aliases: ['sleep attack', 'attaque sommeil', 'sleep attak', 'attaque someil', 'SA'],
     desc: 'Deals Dmg to all enemies and Cause Sleep',
     descFr: 'Inflige DGT et sommeil à tous les ennemis',
