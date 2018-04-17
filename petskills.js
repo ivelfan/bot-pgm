@@ -386,7 +386,7 @@ module.exports = {
   Sleep: {
     title: 'Sleep',
     titleFr: 'Sommeil',
-    thumbnail: 'Sleep_Attack.png',
+    thumbnail: 'Sleep.png',
     aliases: ['sleep', 'someil', 'sommeil', 'dodo'],
     desc: 'DMG & Sleep (single target)',
     descFr: 'Inflige DGT et sommeil à un ennemi',
