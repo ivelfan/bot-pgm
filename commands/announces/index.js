@@ -11,6 +11,7 @@ module.exports = {
     const hour = date.getHours();
     const min = date.getMinutes();
     announces.broadcasts.forEach((broadcast) => {
+      isTime = false;
       broadcast.times.forEach((time) => {
         if (time.days.indexOf(day) > -1 && time.hours.indexOf(hour) > -1 && time.mins.indexOf(min) > -1) {
           isTime = true;
