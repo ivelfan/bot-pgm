@@ -530,7 +530,7 @@ const skills = {
     brutalArrow: {
       title: 'Brutal Arrow',
       titleFr: 'Flèche Brutale',
-      thumbnail: 'Brutal_Arraow.png',
+      thumbnail: 'Brutal_Arrow.png',
       desc: 'High damage attack.',
       descFr: 'Inflige de lourds dégâts',
       grades: ['-'],
