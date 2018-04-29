@@ -22,11 +22,6 @@ server.listen(port, (err) => {
   return console.log(`server is listening on ${port}`);
 });
 
-// Prevent DYNO from sleeping :)
-setInterval(() => {
-  http.get(hostName);
-}, 300000);
-
 // Demarrage
 bot.on('ready', () => {
   console.log(`INFO : Program ${config.bot.name} has started !`);
@@ -117,6 +112,13 @@ bot.on('message', async (message) => {
     if (['petskill', 'ps', 'pskill'].indexOf(command) !== -1) {
       commands.generateEmbedPetSkill(message, { args, hostName });
     }
+
+    // Commande Petskills
+    if (['skill', 's', 'skills'].indexOf(command) !== -1) {
+      console.log(message);
+      commands.generateEmbedSkill(message, { args, hostName });
+    }
+
 
     // Commande help
     if (command === 'announce') {
