@@ -38,14 +38,14 @@ const generateEmbedAllSkill = async (message, data) => {
     title: `${knightSkill.title} / ${knightSkill.titleFr}`,
     color: 0xca0000,
     thumbnail: {
-      url: `${data.hostName}/static/images/skills/${knightSkill.thumbnail}`,
+      url: `${data.hostName}/static/images/Skills/${knightSkill.thumbnail}`,
     },
   };
   const embedArcher = {
     title: `${archerSkill.title} / ${archerSkill.titleFr}`,
     color: 0x00b218,
     thumbnail: {
-      url: `${data.hostName}/static/images/skills/${archerSkill.thumbnail}`,
+      url: `${data.hostName}/static/images/Skills/${archerSkill.thumbnail}`,
     },
   };
   const embedMage = {
@@ -55,7 +55,7 @@ const generateEmbedAllSkill = async (message, data) => {
 
 ${mageSkill.descFr}`,
     thumbnail: {
-      url: `${data.hostName}/static/images/skills/${mageSkill.thumbnail}`,
+      url: `${data.hostName}/static/images/Skills/${mageSkill.thumbnail}`,
     },
   };
 
