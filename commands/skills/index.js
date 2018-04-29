@@ -35,21 +35,23 @@ const generateEmbedAllSkill = async (message, data) => {
   //   }
   // }
   const embedKnight = {
-    title: `${knightSkill.title} / ${knightSkill.titleFr}`,
+    title: `⚔️ ${knightSkill.title} / ${knightSkill.titleFr}`,
     color: 0xca0000,
     thumbnail: {
       url: `${data.hostName}/static/images/Skills/${knightSkill.thumbnail}`,
     },
+    fields: [{ name: 'Classe', value: 'Knight', inline: true }, { name: 'Formule', value: '-', inline: true }],
   };
   const embedArcher = {
-    title: `${archerSkill.title} / ${archerSkill.titleFr}`,
+    title: `🏹 ${archerSkill.title} / ${archerSkill.titleFr}`,
     color: 0x00b218,
     thumbnail: {
       url: `${data.hostName}/static/images/Skills/${archerSkill.thumbnail}`,
     },
+    fields: [{ name: 'Classe', value: 'Archer', inline: true }, { name: 'Formule', value: '-', inline: true }],
   };
   const embedMage = {
-    title: `${mageSkill.title} / ${mageSkill.titleFr}`,
+    title: `☄️ ${mageSkill.title} / ${mageSkill.titleFr}`,
     color: 0x30a6ff,
     description: `${mageSkill.desc}
 
@@ -57,6 +59,7 @@ ${mageSkill.descFr}`,
     thumbnail: {
       url: `${data.hostName}/static/images/Skills/${mageSkill.thumbnail}`,
     },
+    fields: [{ name: 'Classe', value: 'Mage', inline: true }, { name: 'Formule', value: '-', inline: true }],
   };
 
   await message.channel.send({ embed: embedKnight });
