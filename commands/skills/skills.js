@@ -1,5 +1,5 @@
-module.exports = {
-  honor: {
+const skills = {
+  all: {
     stun: {
       linksTo: ['knight.fatalBlow', 'archer.powerArrow', 'mage.magicalShock'],
     },
@@ -530,7 +530,7 @@ module.exports = {
     brutalArrow: {
       title: 'Brutal Arrow',
       titleFr: 'Flèche Brutale',
-      thumbnail: 'Mindblow.png',
+      thumbnail: 'Brutal_Arraow.png',
       desc: 'High damage attack.',
       descFr: 'Inflige de lourds dégâts',
       grades: ['-'],
@@ -718,3 +718,4 @@ module.exports = {
     },
   },
 };
+module.exports = { skills };

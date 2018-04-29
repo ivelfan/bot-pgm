@@ -115,8 +115,7 @@ bot.on('message', async (message) => {
 
     // Commande Petskills
     if (['skill', 's', 'skills'].indexOf(command) !== -1) {
-      console.log(message);
-      commands.generateEmbedSkill(message, { args, hostName });
+      commands.generateEmbedAllSkill(message, { args, hostName });
     }
 
 
