@@ -35,7 +35,7 @@ const generateEmbedAllSkill = async (message, data) => {
   //   }
   // }
   const embedKnight = {
-    title: `⚔️ ${knightSkill.title} / ${knightSkill.titleFr}`,
+    title: `:crossed_swords: ${knightSkill.title} / ${knightSkill.titleFr}`,
     color: 0xca0000,
     thumbnail: {
       url: `${data.hostName}/static/images/Skills/${knightSkill.thumbnail}`,
@@ -45,7 +45,7 @@ const generateEmbedAllSkill = async (message, data) => {
       { name: 'Formule', value: '-', inline: true }],
   };
   const embedArcher = {
-    title: `🏹 ${archerSkill.title} / ${archerSkill.titleFr}`,
+    title: `:bow_and_arrow: ${archerSkill.title} / ${archerSkill.titleFr}`,
     color: 0x00b218,
     thumbnail: {
       url: `${data.hostName}/static/images/Skills/${archerSkill.thumbnail}`,
@@ -55,7 +55,7 @@ const generateEmbedAllSkill = async (message, data) => {
       { name: 'Formule', value: '-', inline: true }],
   };
   const embedMage = {
-    title: `☄️ ${mageSkill.title} / ${mageSkill.titleFr}`,
+    title: `:comet: ${mageSkill.title} / ${mageSkill.titleFr}`,
     color: 0x30a6ff,
     description: `${mageSkill.desc}
 
