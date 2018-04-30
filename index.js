@@ -1,5 +1,4 @@
 const Discord = require('discord.js');
-const http = require('http');
 // Config
 const config = require('./config.json');
 const chat = require('./chat.json');
@@ -12,7 +11,7 @@ const devChannelName = process.env.NODE_ENV !== 'production' ? 'botty-test' : ''
 
 const hostName = process.env.NODE_ENV !== 'production' ? 'http://localhost:1337' : 'http://botpgm.herokuapp.com';
 const port = process.env.PORT || 1337;
-
+let botDev;
 let devChannel;
 
 server.listen(port, (err) => {
@@ -31,14 +30,10 @@ bot.on('ready', () => {
       devChannel = guild.channels.find('name', devChannelName);
     }
   });
-  // Back message
+  // Set the developer of the bot (AKA: Me.)
   bot.guilds.forEach((guild) => {
     if (guild.available) {
-      if (devChannel) {
-        //  devChannel.send(`I'm back bitches!`);
-      } else {
-        // guild.channels.find('name', 'idle-ro_discussion').send('I\'m back bitches!');
-      }
+      botDev = guild.members.find('id', '210749135748464640');
     }
   });
   // Back message
@@ -115,7 +110,12 @@ bot.on('message', async (message) => {
 
     // Commande Petskills
     if (['skill', 's', 'skills'].indexOf(command) !== -1) {
-      commands.generateEmbedAllSkill(message, { args, hostName });
+      commands.generateEmbedAllSkill(message, { args, hostName }).catch((err) => {
+        message.channel.send('Oops. Mistkae were made ...');
+        botDev.send(`\`\`\`${err.message} \`\`\``);
+        botDev.send(`\`\`\`${err.stack} \`\`\``);
+        return undefined;
+      });
     }
 
 

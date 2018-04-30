@@ -1,52 +1,206 @@
 const skills = {
   all: {
     stun: {
-      linksTo: ['knight.fatalBlow', 'archer.powerArrow', 'mage.magicalShock'],
+      linksTo: {
+        knight: 'knight.fatalBlow',
+        archer: 'archer.powerArrow',
+        mage: 'mage.magicalShock',
+      },
     },
     double: {
-      linksTo: ['knight.doubleAttack', 'archer.doubleStrafe', 'mage.magicalDoubleHit'],
+      linksTo: {
+        knight: 'knight.doubleAttack',
+        archer: 'archer.doubleStrafe',
+        mage: 'mage.magicalDoubleHit',
+      },
     },
     frost: {
-      linksTo: ['knight.frostBlade', 'archer.frostBolt', 'mage.stoneCurse'],
+      linksTo: {
+        knight: 'knight.frostBlade',
+        archer: 'archer.frostBolt',
+        mage: 'mage.stoneCurse',
+      },
     },
     sleep: {
-      linksTo: ['knight.sleepingBlade', 'archer.sleepBolt', 'mage.sleep'],
+      linksTo: {
+        knight: 'knight.sleepingBlade',
+        archer: 'archer.sleepBolt',
+        mage: 'mage.sleep',
+      },
     },
     silence: {
-      linksTo: ['knight.bladeOfSilence', 'archer.silentBolt', 'mage.silence'],
+      linksTo: {
+        knight: 'knight.bladeOfSilence',
+        archer: 'archer.silentBolt',
+        mage: 'mage.silence',
+      },
     },
     hit: {
-      linksTo: ['knight.spearDynamo', 'archer.mitation', 'mage.elementFocus'],
+      linksTo: {
+        knight: 'knight.spearDynamo',
+        archer: 'archer.mitation',
+        mage: 'mage.elementFocus',
+      },
     },
     dexterity: {
-      linksTo: ['knight.dexterity', 'archer.windWalker', 'mage.dexterity'],
+      linksTo: {
+        knight: 'knight.dexterity',
+        archer: 'archer.windWalker',
+        mage: 'mage.dexterity',
+      },
     },
     triple: {
-      linksTo: ['knight.tripleAction', 'archer.tripleStrafe', 'mage.mentalPower'],
+      linksTo: {
+        knight: 'knight.tripleAction',
+        archer: 'archer.tripleStrafe',
+        mage: 'mage.mentalPower',
+      },
     },
     curse: {
-      linksTo: ['knight.cursedBlade', 'archer.curseBolt', 'mage.curseMagic'],
+      linksTo: {
+        knight: 'knight.cursedBlade',
+        archer: 'archer.curseBolt',
+        mage: 'mage.curseMagic',
+      },
     },
     fury: {
-      linksTo: ['knight.furiousBlow', 'archer.furyArrow', 'mage.energyReflection'],
+      linksTo: {
+        knight: 'knight.furiousBlow',
+        archer: 'archer.furyArrow',
+        mage: 'mage.energyReflection',
+      },
     },
     h32: {
-      linksTo: ['knight.chargedAttack', 'archer.aimedBolt', 'mage.elementBomb'],
+      linksTo: {
+        knight: 'knight.chargedAttack',
+        archer: 'archer.aimedBolt',
+        mage: 'mage.elementBomb',
+      },
     },
     bleed: {
-      linksTo: ['knight.vitalStrike', 'archer.falconEyes', 'mage.thunderousShot'],
+      linksTo: {
+        knight: 'knight.vitalStrike',
+        archer: 'archer.falconEyes',
+        mage: 'mage.thunderousShot',
+      },
     },
     h36: {
-      linksTo: ['knight.pierce', 'archer.ghostArrow', 'mage.fireWall'],
+      linksTo: {
+        knight: 'knight.pierce',
+        archer: 'archer.ghostArrow',
+        mage: 'mage.fireWall',
+      },
     },
     h39: {
-      linksTo: ['knight.traumaticBlow', 'archer.vulnerabilityMark', 'mage.magicalChase'],
+      linksTo: {
+        knight: 'knight.traumaticBlow',
+        archer: 'archer.vulnerabilityMark',
+        mage: 'mage.magicalChase',
+      },
     },
     lifesteal: {
-      linksTo: ['knight.bladeOfBlood', 'archer.bloodSteal', 'mage.energyTransfer'],
+      linksTo: {
+        knight: 'knight.bladeOfBlood',
+        archer: 'archer.bloodSteal',
+        mage: 'mage.energyTransfer',
+      },
     },
     bash: {
-      linksTo: ['knight.bash', 'archer.brutalArrow', 'mage.mindblow'],
+      linksTo: {
+        knight: 'knight.bash',
+        archer: 'archer.brutalArrow',
+        mage: 'mage.mindblow',
+      },
+    },
+    berzerk: {
+      linksTo: {
+        shared: 'shared.berzerk',
+      },
+    },
+    provoke: {
+      linksTo: {
+        shared: 'shared.provoke',
+      },
+    },
+    counterAttack: {
+      linksTo: {
+        shared: 'shared.counterAttack',
+      },
+    },
+    cure: {
+      linksTo: {
+        shared: 'shared.cure',
+      },
+    },
+    awaken: {
+      linksTo: {
+        shared: 'shared.awaken',
+      },
+    },
+    speed: {
+      linksTo: {
+        shared: 'shared.speed',
+      },
+    },
+    agiReduction: {
+      linksTo: {
+        shared: 'shared.agiReduction',
+      },
+    },
+    targetChange: {
+      linksTo: {
+        shared: 'shared.targetChange',
+      },
+    },
+    concentration: {
+      linksTo: {
+        shared: 'shared.concentration',
+      },
+    },
+    distraction: {
+      linksTo: {
+        shared: 'shared.distraction',
+      },
+    },
+    clearance: {
+      linksTo: {
+        shared: 'shared.clearance',
+      },
+    },
+    hiddenPotential: {
+      linksTo: {
+        shared: 'shared.hiddenPotential',
+      },
+    },
+    fullThrottle: {
+      linksTo: {
+        shared: 'shared.fullThrottle',
+      },
+    },
+    powerImpact: {
+      linksTo: {
+        shared: 'shared.powerImpact',
+      },
+    },
+    powerShield: {
+      linksTo: {
+        shared: 'shared.powerShield',
+      },
+    },
+    mislead: {
+      linksTo: {
+        shared: 'shared.mislead',
+      },
+    },
+    battleChains: {
+      linksTo: {
+        shared: 'shared.battleChains',
+      },
+    },
+    intimidation: {
+      linksTo: {
+        shared: 'shared.intimidation',
+      },
     },
   },
   shared: {
@@ -228,6 +382,7 @@ const skills = {
       grades: ['H60 - ', 'H62 - '],
     },
   },
+
   knight: {
     fatalBlow: {
       title: 'Fatal Blow',
