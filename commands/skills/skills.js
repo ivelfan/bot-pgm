@@ -525,7 +525,6 @@ const skills = {
       thumbnail: 'Bash.png',
       desc: 'High damage attack.',
       descFr: 'Inflige de lourds dégâts',
-      grades: ['-'],
     },
 
     endure: {
@@ -851,7 +850,6 @@ const skills = {
       thumbnail: 'Mindblow.png',
       desc: 'High damage attack.',
       descFr: 'Inflige de lourds dégâts',
-      grades: ['-'],
     },
 
     energyCoat: {
