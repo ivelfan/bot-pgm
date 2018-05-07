@@ -14,6 +14,8 @@ const hostName = process.env.NODE_ENV !== 'production' ? 'http://localhost:1337'
 const port = process.env.PORT || 1337;
 
 let devChannel;
+const maisCounter = 0;
+let lili;
 
 server.listen(port, (err) => {
   if (err) {
@@ -35,6 +37,7 @@ bot.on('ready', () => {
     if (guild.available && devChannelName) {
       devChannel = guild.channels.find('name', devChannelName);
     }
+    lili = guild.members.find('id', '379298113577418752');
   });
   // Back message
   bot.guilds.forEach((guild) => {
@@ -63,6 +66,12 @@ bot.on('message', async (message) => {
   const { author: sender, member } = message;
   if (sender.bot) return; // Ignore les autres bots
   // Chat
+  if (sender.id === lili.id) {
+    if (messageClean.match(/m+a+i+s+/gim)) {
+      message.reply('Mais !');
+    }
+    return;
+  }
   if (message.channel.name === devChannelName || config.bot.canalflood) {
     chat.converse.forEach((converse) => {
       if ((!converse.botname && messageClean.indexOf(config.bot.shortname) === -1)
